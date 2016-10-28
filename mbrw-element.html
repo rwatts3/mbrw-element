@@ -16,6 +16,11 @@ A basic element from Made By Ryan Watts
     </style>
     <h2>Hello [[prop1]]</h2>
 	<h3>{{prop2}}</h3>
+	
+	<template is="dom-repeat" items="{{prop3}}">
+		<h1>Repeat Test - {{item}}</h1>
+	</template>
+
   </template>
 
   <script>
@@ -31,6 +36,12 @@ A basic element from Made By Ryan Watts
 		prop2: {
 			type: String,
 			value: 'my-prop-2'
+		},
+		prop3: {
+			type: Array,
+			value: [
+				'foo','bar','baz'
+			]
 		}
       },
 
