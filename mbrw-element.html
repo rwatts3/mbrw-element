@@ -35,16 +35,20 @@ A basic element from Made By Ryan Watts
         },
 		prop2: {
 			type: String,
-			value: 'my-prop-2'
+			value: 'my-prop-2',
+			notify: true
 		},
 		prop3: {
 			type: Array,
 			value: ['Test User', 'Test Component'],
 			readOnly: true
 		}
-	  }
+	  },
 	  _setProp3: function () {
 		  return ["true"]
+	  },
+	  prop2Handler: function (propValue) {
+		  this._setProp3(propValue);
 	  }
     });
   </script>
