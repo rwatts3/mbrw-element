@@ -3,11 +3,12 @@
   "description": "A basic element from Made By Ryan Watts",
   "main": "mbrw-element.html",
   "keywords": [
-    "web-components",
-	"web-component"
+    "web-components"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.4.0"
+    "polymer": "Polymer/polymer#^1.4.0",
+    "iron-elements": "^1.0.10",
+    "iron-component-page": "^1.1.7"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
