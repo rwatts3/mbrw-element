@@ -1,23 +1,20 @@
 {
-	// See https://go.microsoft.com/fwlink/?LinkId=733558
-	// for the documentation about the tasks.json format
-	"version": "0.1.0",
-	"command": "powershell",
-	"isShellCommand": true,
-	"showOutput": "always",
-	"suppressTaskName": true,
-	"tasks": [
-		{
-			"taskName": "publish",
-			"args": ["C:\\Program Files\\Git\\bin\\sh.exe mkdir temp && cd temp && gp rwatts3 mbrw-element && cd ../ && rm -rf temp"]
-		},
-		{
-			"taskName": "update",
-			"args": ["update"]
-		},
-		{
-			"taskName": "test",
-			"args": ["run", "test"]
-		}
-	]
+    "version": "0.1.0",
+    "command": "C:\\Program Files\\Git\\bin\\sh.exe",
+    "args": ["-c"],
+    "isShellCommand": true,
+    "showOutput": "always",
+    "suppressTaskName": true,
+    "tasks": [
+        {
+            "taskName": "make",
+            "args": ["make"]
+        },
+        {
+            "taskName": "ls",
+            "args": ["ls"]
+        }
+    ]
 }
+
+// "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\sh.exe",
