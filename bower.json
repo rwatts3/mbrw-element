@@ -2,6 +2,7 @@
   "name": "mbrw-element",
   "description": "A basic element from Made By Ryan Watts",
   "main": "mbrw-element.html",
+  "homepage": "https://rwatts3.github.io/mbrw-element/",
   "keywords": [
     "web-components",
     "web-component"
