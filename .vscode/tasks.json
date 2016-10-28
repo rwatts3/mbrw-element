@@ -1,0 +1,18 @@
+{
+    "version": "0.1.0",
+    "command": "C:\\Program Files\\Git\\bin\\sh.exe",
+    "args": ["-i"],
+    "isShellCommand": true,
+    "showOutput": "always",
+    "suppressTaskName": true,
+    "tasks": [
+        {
+            "taskName": "github pages plublish",
+            "args": ["mkdir temp && cd temp && gp rwatts3 mbrw-element && cd ../ && rm -rf temp"]
+        },
+        {
+            "taskName": "ls",
+            "args": ["ls"]
+        }
+    ]
+}
