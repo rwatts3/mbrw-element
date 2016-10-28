@@ -39,7 +39,11 @@ A basic element from Made By Ryan Watts
 		},
 		prop3: {
 			type: Array,
-			value: window.myArray
+			value: function () {
+				return ['foo','bar','baz'] 
+		},
+		_myFunction: function () {
+			return 'private function';
 		}
       },
 
