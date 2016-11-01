@@ -1,0 +1,55 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`mbrw-simple-element`
+A basic element from Made By Ryan Watts
+
+@demo demo/index.html 
+-->
+
+<dom-module id="mbrw-simple-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]</h2>
+	<h3>{{prop2}}</h3>
+	
+	<template is="dom-repeat" items="{{prop3}}">
+		<h1>Repeat Test - {{item}}</h1>
+	</template>
+
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'mbrw-simple-element',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'mbrw-element',
+        },
+		prop2: {
+			type: String,
+			value: 'my-prop-2',
+			notify: true
+		},
+		prop3: {
+			type: Array,
+			value: ['Test User', 'Test Component'],
+			readOnly: true
+		}
+	  },
+	  _setProp3: function () {
+		  return ["true"]
+	  },
+	  prop2Handler: function (propValue) {
+		  this._setProp3(propValue);
+	  }
+    });
+  </script>
+</dom-module>
