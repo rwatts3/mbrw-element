@@ -1,0 +1,60 @@
+<link rel="import" href="../polymer/polymer.html">
+<!--
+`mbrw-simple-element`
+A basic element from Made By Ryan Watts
+
+@demo demo/index.html 
+-->
+
+<dom-module id="mbrw-simple-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+	<h2>Cloudinary Test {{width}}</h2>
+	<template is="dom-bind">
+      <input value="{{width::input}}" type="number" placeholder="Type something in me"></input>
+      <div>{{width}}</div>
+	  <img width="{{width}}" height="{{width}}" src="http://res.cloudinary.com/demo/image/fetch/w_{{width}},h_{{width}},c_fill,g_face,r_max,f_auto/http://upload.wikimedia.org/wikipedia/commons/0/0c/Scarlett_Johansson_C%C3%A9sars_2014.jpg"/>
+	  <code>
+		  http://res.cloudinary.com/demo/image/fetch/w_{{width}},h_{{width}},c_fill,g_face,r_max,f_auto/http://upload.wikimedia.org/wikipedia/commons/0/0c/Scarlett_Johansson_C%C3%A9sars_2014.jpg"
+	</code>
+	</template>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'mbrw-simple-element',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'mbrw-element',
+        },
+		width: {
+			type: Number,
+			value: 300
+		},
+		prop2: {
+			type: String,
+			value: 'my-prop-2',
+			notify: true
+		},
+		prop3: {
+			type: Array,
+			value: ['Test User', 'Test Component'],
+			readOnly: true
+		},
+	  },
+	  _setProp3: function () {
+		  return ["true"]
+	  },
+	  prop2Handler: function (propValue) {
+		  this._setProp3(propValue);
+	  }
+    });
+  </script>
+</dom-module>
